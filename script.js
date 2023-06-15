@@ -47,3 +47,37 @@ function leerFora(data) {
     foto.src = data.fotoSrc;
     div.appendChild(foto);   
  };
+
+ document.getElementById('todos').addEventListener('click', mostrarCocktail);
+function mostrarCocktail(){
+
+   fetch('https://localhost:7234/api/cocktail/todos',
+   {
+      method: 'GET',
+   })
+   .then((response) => response.json())
+   .then((data) => mostrarFora(data) );
+};
+
+function mostrarFora(data) {
+   document.getElementById('cockteles').innerHTML = '';
+   let nombre, instruction, foto, id;
+  for (let i = 0; i < data.length; i++) {
+      
+   let div = document.createElement('div');
+   div.className = 'individual';
+   document.getElementById('cockteles').appendChild(div);
+   nombre = document.createElement('h2');
+   nombre.innerHTML = data[i].nombre;
+   div.appendChild(nombre);
+   id = document.createElement('h5');
+   id.innerHTML = `Id del cocktail: ${data[i].id}`;
+   div.appendChild(id);
+   instruction = document.createElement('p');
+   instruction.innerHTML = data[i].receta;
+   div.appendChild(instruction);
+   foto = document.createElement('img');
+   foto.src = data[i].fotoSrc;
+   div.appendChild(foto);
+}
+}
