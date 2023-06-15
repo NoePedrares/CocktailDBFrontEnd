@@ -1,0 +1,23 @@
+.contenedor {
+    width: 650px;
+    padding: 5px 15px 15px 15px;
+    border: 2px solid black;
+    margin: 15px auto;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.inputInsertar {
+    width: 400px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline;
+}
+
+
+.botonGrande   {
+    width: 188px;
+    height: 80px;
+    margin: -50px 10px;
+    position: absolute
+}
