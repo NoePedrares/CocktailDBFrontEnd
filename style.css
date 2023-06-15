@@ -21,3 +21,15 @@
     margin: -50px 10px;
     position: absolute
 }
+
+.inputCorto {
+    width: 189px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline;
+}
+
+.botonElimina {
+    width: 188px;
+    margin-left: 5px;
+}
